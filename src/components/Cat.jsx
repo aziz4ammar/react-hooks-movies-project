@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 
-const Cat = () => {
-const [text,setText] = useState("")
+const Cat = ({text,setText}) => {
   return (
     <div>
         <input type="text" value={text} onChange={(e)=>setText(e.target.value)} />
