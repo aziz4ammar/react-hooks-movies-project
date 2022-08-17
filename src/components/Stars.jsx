@@ -13,5 +13,20 @@ const Stars = ({rating}) => {
                 ★
               </span>
             );
-
+          } else {
+            stars.push(
+              <span
+                key={i}
+                style={{ color: "black", cursor: "pointer", fontSize: "22px" }}
+              >
+                ★
+              </span>
+            );
+          }
+        }
+        return stars;
+      };
+    
+      return <div>{starRating(rating)}</div>;
+    };
 export default Stars
