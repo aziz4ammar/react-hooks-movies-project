@@ -1,16 +1,17 @@
 import React from 'react'
 
-const Stars = () => {
-    const rate = (x) =>{
+const Stars = ({rating}) => {
+    const starRating = (x) => {
+        let stars = [];
         for (let i = 0; i < 5; i++) {
-            const element = array[i];
-            
-        }
-    }
-  return (
-    <div>
-    </div>
-  )
-}
+          if (i < x) {
+            stars.push(
+              <span
+                key={i}
+                style={{ color: "gold", cursor: "pointer", fontSize: "22px" }}
+              >
+                ★
+              </span>
+            );
 
 export default Stars
