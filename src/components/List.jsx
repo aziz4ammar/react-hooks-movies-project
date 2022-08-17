@@ -1,10 +1,11 @@
 import React from 'react'
 import Dash from './Dash'
 
-const List = (movie) => {
+const List = ({movie}) => {
+  console.log(movie)
   return (
-    <div>
-        {movie.map(el=><Dash el={el} />)}
+    <div className='list'>
+        {movie.map(el=><Dash el={el} key={el.id} />)}
     </div>
   )
 }
