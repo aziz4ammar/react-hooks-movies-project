@@ -4,6 +4,9 @@ import List from './components/List';
 import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Cat from "./components/Cat";
+import More from './components/More';
+import Dash from './components/Dash';
+import { BrowserRouter, Route,Routes } from "react-router-dom";
 function App() {
   const [movie, setMovie] = useState(tab)
 
