@@ -5,7 +5,7 @@ import Edit from './Edit';
 import Stars from './Stars';
 import "./dash.css"
 import More from './More';
-import { BrowserRouter, Route,Routes } from "react-router-dom";
+import { BrowserRouter, Link, Route,Routes } from "react-router-dom";
 const Dash = ({el,edit}) => {
   return (
     <div>
