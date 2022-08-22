@@ -5,7 +5,6 @@ import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Cat from "./components/Cat";
 import More from './components/More';
-import Dash from './components/Dash';
 import { BrowserRouter, Route,Routes } from "react-router-dom";
 function App() {
   const [movie, setMovie] = useState(tab)
@@ -16,8 +15,12 @@ function App() {
   }
   return (
     <div className="App">
-      <Cat text={text} setText={setText}/>
-      <List movie={movie.filter(el=>el.name.toLowerCase().includes(text.toLowerCase())||el.date.includes(text))} edit={handleEdit}  />
+      <BrowserRouter>
+      <Routes>
+      <Route path="/" element={<><Cat text={text} setText={setText}/><List movie={movie.filter(el=>el.name.toLowerCase().includes(text.toLowerCase())||el.date.includes(text))} edit={handleEdit}  /> </>} />
+      <Route path="/movie/:id" element={<More movie={movie} />} />
+      </Routes>
+      </BrowserRouter>  
     </div>
   );
 }
